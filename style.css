@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(145deg, #153677, #4e805f);
+  padding: 10rem 20px;
+}
+.todo_app {
+  width: 100%;
+  max-width: 50rem;
+  background: #fff;
+  margin: auto;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+.todo_app h1 {
+  font-size: 4rem;
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+.todo_app h1 img {
+  width: 4rem;
+  margin-left: 2rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 3rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.2rem 1rem 0.2rem 0.2rem;
+  font-size: 2rem;
+  overflow: scroll;
+}
+form button {
+  border: none;
+  outline: none;
+  padding: 0.3em 0.5em;
+  background: #ff5945;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 4rem;
+}
+#task_result{
+  color: #ff5945;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  }
+
+  ul{
+  height: 35rem;
+  overflow: scroll;
+}
+ul::-webkit-scrollbar{
+  color: #edeef0;
+}
+ul li.list_items {
+  list-style: none;
+  font-size: 17px;
+  padding: 15px 60px 0px 40px;
+  cursor: pointer;
+  position: relative;
+  height: 58px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+  background: #ddddddcd;
+  
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  background: #fff;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+}
+ul li.checked {
+  color: white;
+  text-decoration: line-through;
+  background: #555555bc;
+}
+ul li.checked::before {
+  background-image: url(img/checked.png);
+}
+
+.scroll{
+  text-align: center;
+  color:#ff5945;
+  font-size: 1.2rem;
+}
+
+/* media quiry */
+@media (max-width:500px){
+  *{
+    font-size: 50%;
+  }
+}
